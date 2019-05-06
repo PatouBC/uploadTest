@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Listitem index{% endblock %}
+
+{% block body %}
+    <h1>Listitem index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Label</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for listitem in listitems %}
+            <tr>
+                <td>{{ listitem.id }}</td>
+                <td>{{ listitem.label }}</td>
+                <td>
+                    <a href="{{ path('listitem_show', {'id': listitem.id}) }}">show</a>
+                    <a href="{{ path('listitem_edit', {'id': listitem.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('listitem_new') }}">Create new</a>
+{% endblock %}
