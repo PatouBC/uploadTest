@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\Request;
 class ProductController extends AbstractFOSRestController
 {
     /**
-     * Retrieves a collection of Task resource
+     * Retrieves a collection of Product resource
      * @Rest\Get("/", name="productlist_api")
      * @Rest\View()
      */
