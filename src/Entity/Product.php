@@ -62,12 +62,12 @@ class Product
         return $this;
     }
 
-    public function getImage(): Image
+    public function getImage(): ?Image
     {
         return $this->image;
     }
 
-    public function setImage(Image $image): self
+    public function setImage(?Image $image): self
     {
         $this->image = $image;
 
